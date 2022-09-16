@@ -8,28 +8,18 @@ import { shuffle } from "./deck"
 function App() {
   const [cards, setCards] = useState(tarotCards)
   const [selectedCardId, setSelectedCardId] = useState(tarotCards[0].id)
-  const selectedCard = cards.find((card) => {
-    return card.id === selectedCardId
-  })
+  const selectedCard = cards.find((card) => card.id === selectedCardId)
 
   const shuffleDeck = () => {
     setCards(shuffle(cards))
   }
 
   const reset = () => {
-    setCards(deckCards)
+    setCards(tarotCards)
   }
 
   const handleSelectedCard = (card) => {
     setSelectedCardId(card.id)
-  }
-
-  const alterarCards = () => {
-    const newDeck = [...cards]
-    const firstObject = { ...newDeck[0] }
-    firstObject.title = "AAAAA"
-    newDeck[0] = firstObject
-    setCards(newDeck)
   }
 
   return (
@@ -39,7 +29,6 @@ function App() {
       <main className="pageContent">
         <div className="cardSymbols">
           <h2>{selectedCard.title}</h2>
-          <button onClick={alterarCards}>Teste</button>
           <div>{selectedCard.content}</div>
         </div>
       </main>
