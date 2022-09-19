@@ -1,5 +1,5 @@
 {
-  "name": "mui-js",
+  "name": "tarot-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watchAll"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",

@@ -4,4 +4,7 @@ export default {
     "^.+\\.[t|j]sx?$": "babel-jest",
   },
   testEnvironment: "jsdom",
+  moduleNameMapper: {
+    "\\.(css|less)$": "<rootDir>/test/__mocks__/styleMock.js",
+  },
 }
