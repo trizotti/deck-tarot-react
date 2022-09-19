@@ -25,7 +25,11 @@ function App() {
   return (
     <div className="app">
       <ButtonsNav onShuffle={shuffleDeck} onResetClick={reset} />
-      <Deck cards={cards} onCardSelected={handleSelectedCard} />
+      <Deck
+        cards={cards}
+        onCardSelected={handleSelectedCard}
+        selectedCardId={selectedCardId}
+      />
       <main className="pageContent">
         <div className="cardSymbols">
           <h2>{selectedCard.title}</h2>
