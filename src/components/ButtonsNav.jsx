@@ -1,3 +1,4 @@
+import React from "react"
 export const ButtonsNav = ({ onShuffle, onResetClick }) => {
   return (
     <div className="buttonsNav">

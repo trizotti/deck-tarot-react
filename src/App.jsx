@@ -1,4 +1,5 @@
-import "./App.css"
+// import "./App.css"
+import React from "react"
 import { ButtonsNav } from "./components/ButtonsNav"
 import { Deck } from "./components/Deck"
 import { useState } from "react"

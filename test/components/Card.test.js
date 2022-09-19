@@ -1,9 +1,5 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from "react"
-import { render, fireEvent } from "@testing-library/react"
+import { render, fireEvent, screen } from "@testing-library/react"
 import { Card } from "../../src/components/Card"
 
 describe("Card", () => {
@@ -23,8 +19,8 @@ describe("Card", () => {
   }
 
   it("renders correctly", () => {
-    const { queryByTestId } = renderComponent()
-    const cardImage = queryByTestId("cardImage")
+    renderComponent()
+    const cardImage = screen.queryByTestId("cardImage")
     expect(cardImage).toBeInTheDocument()
   })
 
