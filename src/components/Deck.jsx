@@ -1,7 +1,7 @@
 import React from "react"
 import { Card } from "./Card"
 
-export const Deck = ({ cards, onCardSelected, selectedCardId }) => {
+export const Deck = ({ cards, onCardClick, selectedCardId, lastSelectedCardId }) => {
   return (
     <div className="deck">
       <div className="deckListView">
@@ -10,8 +10,9 @@ export const Deck = ({ cards, onCardSelected, selectedCardId }) => {
             <Card
               key={card.id}
               card={card}
-              onClick={onCardSelected}
+              onCardClick={onCardClick}
               selectedCardId={selectedCardId}
+              lastSelectedCardId={lastSelectedCardId}
             />
           )
         })}
