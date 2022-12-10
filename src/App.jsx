@@ -3,7 +3,7 @@ import React from "react"
 import { ButtonsNav } from "./components/ButtonsNav"
 import { Deck } from "./components/Deck"
 import { useState } from "react"
-import tarotCards from "./content/tarotA.json"
+import tarotCards from "./content/tarot.json"
 import { shuffle } from "./deck"
 
 function App() {
