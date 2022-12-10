@@ -1,9 +1,13 @@
 import React from "react"
-export const ButtonsNav = ({ onShuffle }) => {
+import { useDeck } from "../providers/DeckProvider"
+
+export const ButtonsNav = () => {
+  const { shuffleDeck } = useDeck()
+
   return (
     <div className="buttonsNav">
       <div>
-        <button onClick={onShuffle}>Embaralhar</button>
+        <button onClick={shuffleDeck}>Embaralhar</button>
       </div>
     </div>
   )

@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react'
-const publicDirPath = '/tarot-art'
+import React, { useEffect, useState } from "react"
+import { useDeck } from "../providers/DeckProvider"
+const publicDirPath = "/tarot-art"
 
-export const Card = ({ card, onCardClick, selectedCardId, lastSelectedCardId }) => {
+export const Card = ({ card }) => {
+  const { onCardClick, selectedCardId, lastSelectedCardId } = useDeck()
   const cardArt =
     `${publicDirPath}/` +
     (selectedCardId === card.id ? `${card.id}.jpg` : `back.jpg`)
