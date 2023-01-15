@@ -12,7 +12,11 @@ function MainContent() {
         </div>
       ) : (
         <div className={styles.cardSymbols}>
+          <h1>Deck de Tarot com React</h1>
+          <br />
           <h2>Embaralhando...</h2>
+          <br />
+          <br />
           <div>Selecione uma carta para continuar</div>
         </div>
       )}
