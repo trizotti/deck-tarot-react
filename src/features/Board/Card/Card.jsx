@@ -6,7 +6,6 @@ export const Card = ({ card }) => {
 
   return (
     <img
-      data-testid="cardImage"
       className={flipAnimationClass}
       src={cardArtUrl}
       onClick={() => onCardClick(card)}
