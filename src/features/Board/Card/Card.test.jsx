@@ -1,6 +1,7 @@
 import Card from './Card'
 import { render, fireEvent, screen } from '@testing-library/react'
 import { useDeck } from '../Deck/useDeck'
+const publicDirPath = '/tarot-art'
 
 const mockOnCardClick = jest.fn()
 jest.mock('../Deck/useDeck', () => ({
@@ -19,7 +20,7 @@ jest.mock('./useCard', () => ({
   useCard: (card) => {
     return {
       flipAnimationClass: 'animate__animated',
-      cardArtUrl: `/tarot-art/${card.id}.jpg`,
+      cardArtUrl: `${publicDirPath}/${card.id}.jpg`,
       onCardClick: mockOnCardClick,
     }
   },

@@ -1,7 +1,7 @@
-import { useDeck } from "../Deck/useDeck"
-import { useEffect, useState } from "react"
+import { useDeck } from '../Deck/useDeck'
+import { useEffect, useState } from 'react'
 
-const publicDirPath = "/tarot-art"
+export const publicDirPath = '/tarot-art'
 
 export const useCard = (card) => {
   const { onCardClick, selectedCardId, lastSelectedCardId } = useDeck()
