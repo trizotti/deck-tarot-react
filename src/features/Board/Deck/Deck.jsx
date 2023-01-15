@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import Card from '../Card/Card.jsx'
 import { useDeck } from './useDeck.js'
+import styles from './Deck.module.css'
 
 export const Deck = ({ timeoutAutoSelect  }) => {
   const { cards, shuffleDeck } = useDeck()
@@ -18,8 +19,8 @@ export const Deck = ({ timeoutAutoSelect  }) => {
   }, [])
 
   return (
-    <div className="deck">
-      <div className="deckListView" ref={deckListViewRef}>
+    <div className={styles.deck}>
+      <div className={styles.deckListView} ref={deckListViewRef}>
         {cards.map((card) => {
           return <Card key={card.id} card={card} />
         })}
