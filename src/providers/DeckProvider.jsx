@@ -1,6 +1,6 @@
-import { createContext, useState, useContext } from "react"
-import PropTypes from "prop-types"
-import tarotCards from "../content/tarot.json"
+import { createContext, useState, useContext, useEffect } from 'react'
+import PropTypes from 'prop-types'
+import tarotCards from '../content/tarot.json'
 
 const DeckContext = createContext(null)
 
@@ -41,8 +41,12 @@ const DeckProvider = ({ children }) => {
   }
 
   const value = {
-    cards, lastSelectedCardId, selectedCardId,
-    onCardClick, shuffleDeck, selectedCard
+    cards,
+    lastSelectedCardId,
+    selectedCardId,
+    onCardClick,
+    shuffleDeck,
+    selectedCard,
   }
 
   return <DeckContext.Provider value={value}>{children}</DeckContext.Provider>

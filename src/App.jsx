@@ -1,11 +1,9 @@
 import './App.css'
 import React from 'react'
-import { ButtonsNav } from './components/ButtonsNav'
-import { Deck } from './components/Deck'
-import { useState } from 'react'
-import { shuffle } from './helpers/deck'
+import { ButtonsNav } from './features/ButtonsNav'
+import { Deck } from './features/Board/Deck/Deck'
 import DeckProvider from './providers/DeckProvider'
-import MainContent from './components/MainContent'
+import MainContent from './features/MainContent'
 
 function App() {
   return (
