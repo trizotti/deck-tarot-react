@@ -1,7 +1,6 @@
 import { useDeck } from '../Deck/useDeck'
 import { useEffect, useState } from 'react'
-
-export const publicDirPath = '/tarot-art'
+export const publicDirPath = location.origin.includes('github') ? '/deck-tarot-react/tarot-art' : '/tarot-art'
 
 export const useCard = (card) => {
   const { onCardClick, selectedCardId, lastSelectedCardId } = useDeck()
