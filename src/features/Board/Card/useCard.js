@@ -26,7 +26,7 @@ export const useCard = (card) => {
 
   const flipAnimationClass = `${
     selectedCardId === card.id ? 'selected' : 'unselected'
-  } animate__animated ${flipAnimation}`
+  } animate__animated ${flipAnimation} ${selectedCardId ? '' : 'animate__flipInY '}`
 
   return { flipAnimationClass, cardArtUrl, onCardClick }
 }

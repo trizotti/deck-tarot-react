@@ -2,12 +2,12 @@ import { useDeck } from '../Deck/useDeck'
 import styles from './MainNav.module.css'
 
 export const MainNav = () => {
-  const { shuffleDeck } = useDeck()
+  const { shuffleDeck, selectedCardId } = useDeck()
 
   return (
     <div className={styles.mainNav}>
       <div>
-        <button onClick={shuffleDeck}>Embaralhar</button>
+        <button disabled={!selectedCardId} onClick={shuffleDeck}>Embaralhar</button>
       </div>
     </div>
   )
