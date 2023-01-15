@@ -1,7 +1,6 @@
-import React from "react"
-import { useDeck } from "../providers/DeckProvider"
+import { useDeck } from '../Deck/useDeck'
 
-export const ButtonsNav = () => {
+export const MainNav = () => {
   const { shuffleDeck } = useDeck()
 
   return (
@@ -12,3 +11,5 @@ export const ButtonsNav = () => {
     </div>
   )
 }
+
+export default MainNav

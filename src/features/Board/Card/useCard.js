@@ -1,11 +1,11 @@
-import { useDeck } from "../../../providers/DeckProvider"
+import { useDeck } from "../Deck/useDeck"
 import { useEffect, useState } from "react"
 
 const publicDirPath = "/tarot-art"
 
 export const useCard = (card) => {
   const { onCardClick, selectedCardId, lastSelectedCardId } = useDeck()
-  const cardArt =
+  const cardArtUrl =
     `${publicDirPath}/` +
     (selectedCardId === card.id ? `${card.id}.jpg` : `back.jpg`)
   const [flipAnimation, setFlipAnimation] = useState('')
@@ -28,5 +28,5 @@ export const useCard = (card) => {
     selectedCardId === card.id ? 'selected' : 'unselected'
   } animate__animated ${flipAnimation}`
 
-  return { selectedCardId, flipAnimationClass , cardArt, onCardClick }
+  return { flipAnimationClass, cardArtUrl, onCardClick }
 }

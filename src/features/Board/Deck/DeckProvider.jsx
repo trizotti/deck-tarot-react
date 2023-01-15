@@ -1,8 +1,8 @@
 import { createContext, useState, useContext, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import tarotCards from '../content/tarot.json'
+import tarotCards from '../../../content/tarot.json'
 
-const DeckContext = createContext(null)
+export const DeckContext = createContext(null)
 
 const shuffle = (array) => {
   const newArray = [...array]
@@ -54,18 +54,6 @@ const DeckProvider = ({ children }) => {
 
 DeckProvider.propTypes = {
   children: PropTypes.node.isRequired,
-}
-
-export const useDeck = () => {
-  const deckContext = useContext(DeckContext)
-
-  if (!deckContext) {
-    throw new Error(
-      'useDeck was called without being nested inside deck provider.'
-    )
-  }
-
-  return deckContext
 }
 
 export default DeckProvider

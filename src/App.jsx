@@ -1,15 +1,14 @@
 import './App.css'
-import React from 'react'
-import { ButtonsNav } from './features/ButtonsNav'
-import { Deck } from './features/Board/Deck/Deck'
-import DeckProvider from './providers/DeckProvider'
-import MainContent from './features/MainContent'
+import MainNav from './features/Board/MainNav/MainNav.jsx'
+import Deck from './features/Board/Deck/Deck'
+import DeckProvider from './features/Board/Deck/DeckProvider'
+import MainContent from './features/Board/MainContent/MainContent.jsx'
 
 function App() {
   return (
     <DeckProvider>
       <div className="app">
-        <ButtonsNav />
+        <MainNav />
         <Deck />
         <MainContent />
       </div>

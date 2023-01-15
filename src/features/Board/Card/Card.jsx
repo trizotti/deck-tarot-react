@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useCard } from './useCard'
 
 export const Card = ({ card }) => {
-  const { selectedCardId, flipAnimationClass, cardArt, onCardClick } = useCard(card)
+  const { flipAnimationClass, cardArtUrl, onCardClick } = useCard(card)
+
   return (
     <img
       data-testid="cardImage"
       className={flipAnimationClass}
-      src={cardArt}
-      onClick={() => {
-        onCardClick(card)
-      }}
+      src={cardArtUrl}
+      onClick={() => onCardClick(card)}
     />
   )
 }
+
+export default Card

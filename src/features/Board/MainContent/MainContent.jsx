@@ -1,5 +1,4 @@
-import React from 'react'
-import { useDeck } from '../providers/DeckProvider'
+import { useDeck } from '../Deck/useDeck'
 
 function MainContent() {
   const { selectedCard } = useDeck()
