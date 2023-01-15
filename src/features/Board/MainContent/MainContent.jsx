@@ -12,7 +12,7 @@ function MainContent() {
         </div>
       ) : (
         <div className={styles.cardSymbols}>
-          <h2>O deck está embaralhado</h2>
+          <h2>Embaralhando...</h2>
           <div>Selecione uma carta para continuar</div>
         </div>
       )}

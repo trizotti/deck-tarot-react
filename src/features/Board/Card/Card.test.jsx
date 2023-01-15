@@ -1,6 +1,5 @@
 import Card from './Card'
 import { render, fireEvent, screen } from '@testing-library/react'
-import { useDeck } from '../Deck/useDeck'
 const publicDirPath = '/tarot-art'
 
 const mockOnCardClick = jest.fn()

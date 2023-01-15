@@ -3,24 +3,16 @@ import Card from '../Card/Card.jsx'
 import { useDeck } from './useDeck.js'
 import styles from './Deck.module.css'
 
-export const Deck = ({ timeoutAutoSelect  }) => {
+export const Deck = () => {
   const { cards, shuffleDeck } = useDeck()
-
-  const deckListViewRef = useRef(null)
-
-  const selectFirstCard = () => {
-    const firstCard = deckListViewRef.current.children[0]
-    firstCard.click()
-  }
 
   useEffect(() => {
     shuffleDeck()
-    setTimeout(() => selectFirstCard(), timeoutAutoSelect ? timeoutAutoSelect  : 500)
   }, [])
 
   return (
     <div className={styles.deck}>
-      <div className={styles.deckListView} ref={deckListViewRef}>
+      <div className={styles.deckListView}>
         {cards.map((card) => {
           return <Card key={card.id} card={card} />
         })}
