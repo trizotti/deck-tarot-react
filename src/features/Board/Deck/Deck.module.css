@@ -17,6 +17,11 @@
   white-space: nowrap;
 }
 
+.deckListView h3 {
+  margin: 16px;
+  color: white;
+}
+
 @media (min-width: 768px) {
 
   .deck {
