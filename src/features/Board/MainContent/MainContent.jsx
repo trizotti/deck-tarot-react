@@ -6,10 +6,10 @@ function MainContent() {
   const { selectedCard } = useDeck()
   return (
     <main className={styles.pageContent}>
-      <span style={{ display: selectedCard ? 'none' : 'block'}}>
+      <span style={{ display: selectedCard ? 'none' : 'block' }}>
         <img src={reactLogo} />
       </span>
-      
+
       {selectedCard ? (
         <div className={styles.cardSymbols}>
           <h2>{selectedCard.title}</h2>
@@ -18,13 +18,17 @@ function MainContent() {
         </div>
       ) : (
         <div className={styles.cardSymbols}>
-          <h1>Deck de Tarot com React</h1>
+          <h1>Insights Tarot</h1>
           <br />
-          <h2>As cartas foram embaralhadas</h2>
+          <h2>As cartas estão embaralhadas</h2>
           <br />
           <br />
-          <small>Selecione uma carta para continuar. <br />Dica: virar a carta aberta também faz o deck embaralhar.</small>
-          
+          <small>
+            - Selecione uma carta para continuar; <br />
+            - Virar a carta aberta também faz o deck embaralhar;<br />
+            - Você pode checar todas as posições antes de embaralhar novamente;<br />
+            - A cada tirada é possível solicitar um insight sobre a carta.
+          </small>
         </div>
       )}
     </main>
