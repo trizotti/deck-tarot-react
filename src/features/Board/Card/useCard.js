@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 export const publicDirPath = location.origin.includes('github') ? '/deck-tarot-react/tarot-art' : '/tarot-art'
 
 export const useCard = (card) => {
-  const { onCardClick, selectedCardId, lastSelectedCardId } = useDeck()
+  const { onCardClick, selectedCardId, lastSelectedCardId, shuffleDeck } = useDeck()
   const cardArtUrl =
     `${publicDirPath}/` +
     (selectedCardId === card.id ? `${card.id}.jpg` : `back.jpg`)
@@ -19,8 +19,9 @@ export const useCard = (card) => {
   useEffect(() => {
     const shouldFlip =
       (lastSelectedCardId === card.id || selectedCardId === card.id) &&
-      selectedCardId !== null
+      selectedCardId !== null 
     if (shouldFlip) flip()
+    if(selectedCardId === null) shuffleDeck()
   }, [selectedCardId])
 
   const flipAnimationClass = `${

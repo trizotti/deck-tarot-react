@@ -1,6 +1,8 @@
 .pageContent {
+  position: relative;
   overflow-y: auto;
   grid-area: pageContent;
+  overflow: hidden;
 }
 
 .cardSymbols {
@@ -11,6 +13,23 @@
   font-size: x-large;
   padding-bottom: 50px;
   color: white;
+}
+
+.pageContent img{
+  width: 25%;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  animation: rotation 20s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 @media (min-width: 768px) {
