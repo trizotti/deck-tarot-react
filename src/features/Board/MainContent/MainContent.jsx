@@ -8,6 +8,7 @@ function MainContent() {
       {selectedCard ? (
         <div className={styles.cardSymbols}>
           <h2>{selectedCard.title}</h2>
+          <br />
           <div>{selectedCard.content}</div>
         </div>
       ) : (
