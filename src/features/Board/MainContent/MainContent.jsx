@@ -6,10 +6,6 @@ function MainContent() {
   const { selectedCard } = useDeck()
   return (
     <main className={styles.pageContent}>
-      <span style={{ display: selectedCard ? 'none' : 'block' }}>
-        <img src={reactLogo} />
-      </span>
-
       {selectedCard ? (
         <div className={styles.cardSymbols}>
           <h2>{selectedCard.title}</h2>
@@ -27,7 +23,7 @@ function MainContent() {
             - Selecione uma carta para continuar; <br />
             - Virar a carta aberta também faz o deck embaralhar;<br />
             - Você pode checar todas as posições antes de embaralhar novamente;<br />
-            - A cada tirada é possível solicitar um insight sobre a carta.
+            - A cada tirada é possível solicitar um insight sobre a carta (em breve).
           </small>
         </div>
       )}
