@@ -1,6 +1,7 @@
 .deck {
   height: 20vh;
   border-right: #ffffff solid 1px;
+  border-bottom: #ffffff solid 1px;
   background-color: #372e57a2;
 }
 
@@ -26,6 +27,7 @@
 
   .deck {
     height: 100vh;
+    border-bottom: none;
   }
 
   .deckListView {

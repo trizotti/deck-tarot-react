@@ -1,8 +1,8 @@
 .pageContent {
   position: relative;
-  overflow-y: auto;
+  overflow-y: scroll;
   grid-area: pageContent;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .cardSymbols {
