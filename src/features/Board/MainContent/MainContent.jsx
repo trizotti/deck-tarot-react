@@ -6,7 +6,7 @@ function MainContent() {
   const { selectedCard } = useDeck()
   return (
     <main className={styles.pageContent}>
-      <img src={reactLogo} style={{ display: selectedCard ? 'none' : 'block'}}/>
+      <img src={reactLogo} />
       {selectedCard ? (
         <div className={styles.cardSymbols}>
           <h2>{selectedCard.title}</h2>
