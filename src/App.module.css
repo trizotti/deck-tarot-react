@@ -1,0 +1,21 @@
+.app {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh auto 10vh;
+  grid-template-areas:
+    "deck"
+    "pageContent"
+    "navButtons";
+}
+
+@media (min-width: 768px) {
+  .app {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 10vh auto 10vh;
+    grid-template-areas:
+      "deck navButtons"
+      "deck pageContent"
+      "deck pageContent";
+  }
+}
