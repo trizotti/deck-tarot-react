@@ -1,7 +1,0 @@
-.unselected {
-  box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.548);
-}
-
-.selected {
-  box-shadow: 0 0 9px 4px rgba(238, 5, 255, 0.726);
-}
